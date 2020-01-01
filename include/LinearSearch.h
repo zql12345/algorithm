@@ -5,6 +5,6 @@
 
 #include <iostream>
 
-int LinearSearch(int a[],int n,int m);
+int LinearSearch(const int a[],int n,int m);
 
 #endif //ALGORITHM_LINEARSEARCH_H
