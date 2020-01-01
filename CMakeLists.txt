@@ -12,11 +12,12 @@ add_subdirectory( BubbleSort )
 add_subdirectory( LinearSearch )
 
 link_directories( ${PROJECT_SOURCE_DIR}/lib )
-add_executable( algorithm main.cpp )
+add_executable( algorithm main.cpp include/LinearSearch.h)
 
 target_link_libraries( algorithm libBubbleSort.a )
 target_link_libraries( algorithm libSelectSort.a )
 target_link_libraries( algorithm libLinearSearch.a )
+
 
 
 
