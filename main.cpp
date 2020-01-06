@@ -1,13 +1,27 @@
 #include <iostream>
-#include "BubbleSort.h"
-#include "SelectSort.h"
-#include "LinearSearch.h"
-#include "Recursion.h"
+#include "BinaryTree.h"
 
-int main() {
-    int n = 5;
-    int sum;
-    sum = Recursion(n) ;
-    std::cout << sum << std::endl;
+int main(){
+    Treenote<char> jia,jian,cheng,chu,a,b,c,d,e;
+    jia.data = '+';
+    jian.data = '-';
+    cheng.data = '*';
+    chu.data = '/';
+    a.data = 'a';
+    b.data = 'b';
+    c.data = 'c';
+    d.data = 'd';
+    e.data = 'e';
+    BinaryTree<char> tree;
+    tree.root = &jia;
+    jia.LeftChild = &jian;
+    jia.RightChild = &a;
+    jian.LeftChild = &cheng;
+    jian.RightChild = &b;
+    cheng.LeftChild = &chu;
+    cheng.RightChild = &c;
+    chu.LeftChild = &e;
+    chu.RightChild = &d;
+    tree.Inorder(&jia);
     return 0;
 }
