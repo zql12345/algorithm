@@ -17,12 +17,12 @@ add_subdirectory( BinaryTree )
 link_directories( ${PROJECT_SOURCE_DIR}/lib )
 add_executable( main main.cpp)
 
-target_link_libraries( main BubbleSort )
-target_link_libraries( main SelectSort )
-target_link_libraries( main LinearSearch )
-target_link_libraries( main Recursion )
-target_link_libraries( main Permutations )
-target_link_libraries( main BinaryTree )
+target_link_libraries( main -lBubbleSort )
+target_link_libraries( main -lSelectSort )
+target_link_libraries( main -lLinearSearch )
+target_link_libraries( main -lRecursion )
+target_link_libraries( main -lPermutations )
+target_link_libraries( main -lBinaryTree )
 
 
 

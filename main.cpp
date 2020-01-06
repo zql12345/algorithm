@@ -22,6 +22,6 @@ int main(){
     cheng.RightChild = &c;
     chu.LeftChild = &e;
     chu.RightChild = &d;
-    tree.Inorder(&jia);
+    tree.print();
     return 0;
 }

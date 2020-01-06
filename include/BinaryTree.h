@@ -30,11 +30,12 @@ public:
     BinaryTree(){
         root = NULL;
     }
-    void Inorder(Treenote<T> *Node); //中序遍历
+    void Inorder(Treenote<T> *Node);//中序遍历
     void PreOrder(Treenote<T> *Node); //前序遍历
     void PostOrder(Treenote<T> *Node); //后序遍历
     void LevelOrder(Treenote<T> *Node);//层序遍历
     void visit(Treenote<T> *Node);
+    void print();
 public:
     Treenote<T> *root; //指向根节点的指针
 };
