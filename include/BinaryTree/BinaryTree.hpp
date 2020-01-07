@@ -3,8 +3,8 @@
 //用链表实现二叉树
 //
 
-#ifndef ALGORITHM_BINARYTREE_H
-#define ALGORITHM_BINARYTREE_H
+#ifndef ALGORITHM_BINARYTREE_HPP
+#define ALGORITHM_BINARYTREE_HPP
 
 #include <iostream>
 
@@ -23,7 +23,6 @@ public:
     Treenote<T> *RightChild; //右孩子,右子节点
 };
 
-
 template <class T>
 class BinaryTree{
 public:
@@ -35,10 +34,25 @@ public:
     void PostOrder(Treenote<T> *Node); //后序遍历
     void LevelOrder(Treenote<T> *Node);//层序遍历
     void visit(Treenote<T> *Node);
-    void print();
 public:
     Treenote<T> *root; //指向根节点的指针
 };
 
 
-#endif //ALGORITHM_BINARYTREE_H
+template <class T>  //中序遍历的递归实现
+void BinaryTree<T>::Inorder(Treenote<T> *Node){
+    if(Node){
+        Inorder(Node->LeftChild);  //先遍历左子树
+        visit(Node);  //输出节点
+        Inorder(Node->RightChild);  //遍历右节点
+    }
+}
+
+
+template <class T>
+void BinaryTree<T>::visit(Treenote<T> *Node) {
+    std::cout << Node->data << std::endl;
+}
+
+
+#endif //ALGORITHM_BINARYTREE_HPP

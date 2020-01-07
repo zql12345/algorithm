@@ -1,5 +1,5 @@
 #include <iostream>
-#include "BinaryTree.h"
+#include "BinaryTree/BinaryTree.hpp"
 
 int main(){
     Treenote<char> jia,jian,cheng,chu,a,b,c,d,e;
@@ -22,6 +22,6 @@ int main(){
     cheng.RightChild = &c;
     chu.LeftChild = &e;
     chu.RightChild = &d;
-    tree.print();
+    tree.Inorder(tree.root);
     return 0;
 }
