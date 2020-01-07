@@ -7,7 +7,7 @@
 #define ALGORITHM_BINARYTREE_HPP
 
 #include <iostream>
-
+#include <queue>  //包含了队列
 template <class T>
 class BinaryTree;   //前向声明
 
@@ -49,10 +49,31 @@ void BinaryTree<T>::Inorder(Treenote<T> *Node){
 }
 
 
-template <class T>
+template <class T>  //输出节点的数据
 void BinaryTree<T>::visit(Treenote<T> *Node) {
     std::cout << Node->data << std::endl;
 }
 
+template <class T> //前序遍历算法的实现
+void BinaryTree<T>::PreOrder(Treenote<T> *Node) {
+    if(Node){
+        visit(Node);
+        PreOrder(Node->LeftChild);
+        PreOrder(Node->RightChild);
+    }
+}
 
+template <class T>  //后序遍历算法的实现
+void BinaryTree<T>::PostOrder(Treenote<T> *Node) {
+    if(Node){
+        PreOrder(Node->LeftChild);
+        PreOrder(Node->RightChild);
+        visit(Node);
+    }
+}
+
+template <class T> //层序遍历算法的实现
+void BinaryTree<T>::LevelOrder(Treenote<T> *Node) {
+
+}
 #endif //ALGORITHM_BINARYTREE_HPP

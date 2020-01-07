@@ -23,5 +23,7 @@ int main(){
     chu.LeftChild = &e;
     chu.RightChild = &d;
     tree.Inorder(tree.root);
+    tree.PreOrder(tree.root);
+    tree.PostOrder(tree.root);
     return 0;
 }

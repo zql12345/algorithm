@@ -9,6 +9,7 @@ include_directories( ${PROJECT_SOURCE_DIR}/include )
 
 add_subdirectory( Search )
 add_subdirectory( Sort )
+add_subdirectory( queue )
 link_directories( ${PROJECT_SOURCE_DIR}/lib )
 
 add_executable( main main.cpp)
