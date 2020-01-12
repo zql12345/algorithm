@@ -22,8 +22,6 @@ int main(){
     cheng.RightChild = &c;
     chu.LeftChild = &e;
     chu.RightChild = &d;
-    tree.Inorder(tree.root);
-    tree.PreOrder(tree.root);
-    tree.PostOrder(tree.root);
+    tree.LevelOrder(tree.root);
     return 0;
 }

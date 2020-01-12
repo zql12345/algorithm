@@ -74,6 +74,20 @@ void BinaryTree<T>::PostOrder(Treenote<T> *Node) {
 
 template <class T> //层序遍历算法的实现
 void BinaryTree<T>::LevelOrder(Treenote<T> *Node) {
-
+    std::queue<Treenote<T>*> q;
+    while(Node){
+        visit(Node);
+        if(Node->LeftChild){
+            q.push(Node->LeftChild);
+        }  //检查有没有左子树
+        if(Node->RightChild){
+            q.push(Node->RightChild);
+        }  //检查有没有右子树
+        if(q.empty()){
+            return;
+        }
+        Node = q.front();
+        q.pop();
+    }
 }
 #endif //ALGORITHM_BINARYTREE_HPP
